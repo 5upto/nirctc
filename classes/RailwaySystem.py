@@ -1,8 +1,6 @@
 import tkinter as tk
 import customtkinter as ctk
 from tkinter import messagebox, ttk
-from PIL import Image, ImageTk
-from time import strftime
 import os
 import sqlite3
 from .Booking import Booking
@@ -17,9 +15,6 @@ db_path = os.path.join(os.path.dirname(
 
 
 class ReservationSystem:
-
-    train = ""
-
     def book_ticket(self, main_app, current_frame, username):
         # Ticket Booking window
         current_frame.pack_forget()
@@ -118,8 +113,10 @@ class ReservationSystem:
         back_button.place(relx=0.7, rely=0.8)
 
     def cancel_ticket(self, app, current_frame):
+        # Remove the current frame
         current_frame.pack_forget()
 
+        # Create the cancel ticket frame
         cancel_ticket_window = ctk.CTkFrame(
             app, width=320, height=720, corner_radius=10)
         cancel_ticket_window.pack(fill=tk.BOTH, padx=20, pady=20)
@@ -148,12 +145,11 @@ class ReservationSystem:
         current_frame.pack_forget()
         next_frame.pack(fill=tk.BOTH, padx=20, pady=20)
 
-    def check_seat_availability(self, train, seat_class):
-        pass
-
     def check_status(self, app, current_frame):
+        # Remove the current frame
         current_frame.pack_forget()
 
+        # Create the status ticket window
         ticket_status_window = ctk.CTkFrame(
             app, width=320, height=720, corner_radius=10)
         ticket_status_window.pack(fill=tk.BOTH, padx=20, pady=20)
@@ -178,12 +174,6 @@ class ReservationSystem:
             "Century Gothic Bold", 16), command=lambda: self.go_back(ticket_status_window, current_frame), fg_color="#FF2400")
         back_button.place(x=640, y=40)
 
-    def add_train(self):
-        pass
-
-    def remove_train(self):
-        pass
-
     @staticmethod
     def generate_pnr_no():
         con = sqlite3.connect(db_path)
@@ -196,6 +186,7 @@ class ReservationSystem:
         con.close()
         return pnr_no
 
+    # Finds an available train with the given boarding and arriving stations
     def train_select(self, from_station, to_station, frame):
         con = sqlite3.connect(db_path)
         cur = con.cursor()
@@ -214,7 +205,6 @@ class ReservationSystem:
         con.close()
 
     def add_booking(self, booking: Booking, current_frame, next_frame):
-
         month, day, year = booking.date_of_journey.split("/")
         new_date = f"20{year}-{month}-{day}"
         con = sqlite3.connect(db_path)
