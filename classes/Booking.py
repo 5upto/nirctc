@@ -9,6 +9,3 @@ class Booking:
         self.train_class = train_class
         self.from_station = from_station
         self.to_station = to_station
-
-    def update_booking_status(self):
-        pass
