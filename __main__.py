@@ -72,20 +72,6 @@ train_data = [
 ]
 """
 
-db_path = os.path.join(os.path.dirname(__file__), "db", "nirctc.db")
-con = sqlite3.connect(db_path)
-cur = con.cursor()
-
-# cur.execute("drop table Booking")
-cur.execute("create table IF NOT EXISTS Booking (pnr_no TEXT PRIMARY KEY, user_name TEXT, full_name TEXT, age INT, date_of_journey DATE, train TEXT, Class TEXT, from_station TEXT, to_station TEXT, booking_status TEXT)")
-record = cur.execute("select * from Booking").fetchall()
-print(record)
-
-
-con.commit()
-cur.close()
-con.close()
-
 # Set appearance
 ctk.set_appearance_mode("Dark")
 ctk.set_default_color_theme("green")
