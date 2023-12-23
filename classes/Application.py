@@ -167,6 +167,3 @@ class Application:
         string = strftime('%I:%M:%S %p, %d/%m/%Y')
         label.configure(text=string)
         label.after(1000, lambda: Application.display_time(label))
-
-    def booked_history(self, username):
-        pass
