@@ -2,7 +2,7 @@
 
 ## Overview
 
-NIRCTC is a mini-mock railway reservation system, as part of an Object-Oriented System Design project. This project aims at demonstrating the simplified functionaliy of a railway reservation system.
+NIRCTC is a mini-mock railway reservation system, as part of an Object-Oriented System Design project. This project aims at demonstrating the simplified functionality of a railway reservation system.
 
 ## Table of Contents
 
@@ -12,6 +12,7 @@ NIRCTC is a mini-mock railway reservation system, as part of an Object-Oriented 
 - [Setup Instructions](#setup-instructions)
 - [Technologies Used](#technologies-used)
 - [Database Structure](#database-structure)
+- [Live Demo](#live-demo)
 - [How It Works](#how-it-works)
   - [User Registration and Authentication](#user-registration-and-authentication)
   - [Ticket Booking](#ticket-booking)
@@ -128,6 +129,10 @@ Table: Train
     to_station TEXT
     no_of_seats INT
 ```
+
+## Live Demo
+
+https://github.com/khairalanam/nirctc/assets/84736189/7ccc49b1-489c-413b-8efd-88230e360167
 
 ## How It Works
 
