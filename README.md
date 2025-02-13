@@ -68,7 +68,7 @@ NIRCTC utilizes a server-client architecture. The entire project is implemented 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/khairalanam/nirctc
+   git clone https://github.com/5upto/nirctc
    ```
 
 2. Navigate to the project directory:
@@ -132,7 +132,7 @@ Table: Train
 
 ## Live Demo
 
-https://github.com/khairalanam/nirctc/assets/84736189/7ccc49b1-489c-413b-8efd-88230e360167
+https://github.com/5upto/nirctc/assets/84736189/7ccc49b1-489c-413b-8efd-88230e360167
 
 ## How It Works
 
@@ -152,4 +152,4 @@ Users can cancel their booked tickets with appropriate confirmation, providing a
 
 The NIRCTC is a simple user-centric application designed with a focus on performance, security, and scalability. This mini project was an insightful dive into how the architecture of a reservation system works as well as how many of the real-world projects follow a similar architecture to perform the specified tasks.
 
-Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/your-username/) or [Twitter](https://twitter.com/your-twitter-handle/).
+Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/5upto/).
